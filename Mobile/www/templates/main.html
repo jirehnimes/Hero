@@ -1,0 +1,21 @@
+<ion-view title="Main" id="main">
+    <ion-content overflow-scroll="true" padding="false" scroll="true">
+        <div class="row no-padding">
+            <div class="col">
+                <label class="item item-input">
+                    <input type="text" placeholder="Username" ng-model="loginData.username">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password" ng-model="loginData.password">
+                </label>
+                <button ng-click="doLogin()" class="button button-block button-dark">
+                    LOG IN
+                </button>
+                <div ng-repeat="cat in cats">
+                    <h1>{{ cat.name }}</h1>
+                    <h2>{{ cat.color }}</h2>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
