@@ -44,7 +44,10 @@ angular.module('hero.mainController', [])
 			$ionicPopup.alert({
 				title: 'Shake Shake Shake'
 			});
+			shake.stopWatch();
 		};
+
+		shake.startWatch(onShake, 40 /*, onError */);
 
 		$scope.data = {
 		speechText: ''
