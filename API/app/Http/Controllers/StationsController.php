@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\User;
-use Auth;
-use Illuminate\Support\Facades\Input;
 
-class UsersController extends Controller
+class StationsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return User::all();
-    }
-
-    public function login()
-    {
-        if(Auth::attempt(Input::only('username','password'))){
-            $user[] = Auth::user();
-            return $user;
-        }else{
-            $user[] = 'invalid email/pass combo';
-            return $user;
-        }
+        //
     }
 
     /**
@@ -50,9 +36,8 @@ class UsersController extends Controller
      */
     public function store()
     {
-         $user=Request::all();
-        User::create($user);
-        
+        $station=Request::all();
+        Station::create($station);
     }
 
     /**
@@ -63,9 +48,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        
-        $user=User::find($id);
-
+         $station=Station::find($id);
     }
 
     /**
@@ -76,7 +59,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        
+        $station=Station::find($id);
 
     }
 
@@ -89,10 +72,9 @@ class UsersController extends Controller
      */
     public function update($id)
     {
-        $userUpdate=Request::all();
-        $user=User::find($id);
-        $user->update($userUpdate);
-
+        $stationUpdate=Request::all();
+        $station=Station::find($id);
+       $station->update($stationUpdate);
     }
 
     /**
@@ -103,6 +85,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
+        Station::find($id)->delete();
+
     }
 }

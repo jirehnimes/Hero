@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\User;
-use Auth;
-use Illuminate\Support\Facades\Input;
 
-class UsersController extends Controller
+class BadgesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return User::all();
-    }
-
-    public function login()
-    {
-        if(Auth::attempt(Input::only('username','password'))){
-            $user[] = Auth::user();
-            return $user;
-        }else{
-            $user[] = 'invalid email/pass combo';
-            return $user;
-        }
+        //
     }
 
     /**
@@ -50,9 +36,8 @@ class UsersController extends Controller
      */
     public function store()
     {
-         $user=Request::all();
-        User::create($user);
-        
+        $badge=Request::all();
+        Badge::create($badge);
     }
 
     /**
@@ -63,9 +48,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        
-        $user=User::find($id);
-
+        $badge=Badge::find($id);
     }
 
     /**
@@ -76,7 +59,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        
+        $badge=Badge::find($id);
 
     }
 
@@ -89,10 +72,9 @@ class UsersController extends Controller
      */
     public function update($id)
     {
-        $userUpdate=Request::all();
-        $user=User::find($id);
-        $user->update($userUpdate);
-
+        $badgeUpdate=Request::all();
+        $badge=Badge::find($id);
+        $badge->update($badgeUpdate);
     }
 
     /**
@@ -103,6 +85,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
+        Badge::find($id)->delete();
     }
 }
