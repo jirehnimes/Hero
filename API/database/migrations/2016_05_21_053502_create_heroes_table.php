@@ -17,7 +17,7 @@ class CreateHeroesTable extends Migration
             $table->integer('ability_id');
             $table->integer('badge_id');
             $table->string('codename');
-            $table->integer('hero_id');
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -14,10 +14,9 @@ class CreateReportsTable extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->increments('id');
-            $table->decimal('lat', 10,6);
-            $table->decimal('long', 10,6);
-            $table->string('leveltype');
-            $table->time('time');
+            $table->string('type');
+            $table->decimal('latitude', 10,6);
+            $table->decimal('longitude', 10,6);
             $table->timestamps();
         });
     }

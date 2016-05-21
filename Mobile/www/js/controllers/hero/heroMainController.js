@@ -4,15 +4,6 @@ angular.module('hero.heroMainController', [])
 
 	$ionicPlatform.ready(function(){
 
-		$scope.sendSMS = function(){
-			$cordovaSms
-			.send('09068570712', 'SMS content was sent.', options)
-			.then(function() {
-			// Success! SMS was sent
-			}, function(error) {
-			// An error occurred
-			});
-		}
 		
 	});
 

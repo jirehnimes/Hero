@@ -13,11 +13,10 @@ class CreateAbilitiesTable extends Migration
     public function up()
     {
         Schema::create('abilities', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id');
             $table->string('ability');
             $table->string('description');
             $table->string('certifications');
-            $table->integer('hero_id');
             $table->timestamps();
         });
     }
