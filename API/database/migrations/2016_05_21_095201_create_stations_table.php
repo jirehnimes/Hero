@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHeroesTable extends Migration
+class CreateStationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateHeroesTable extends Migration
      */
     public function up()
     {
-        Schema::create('heroes', function (Blueprint $table) {
+        Schema::create('stations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ability_id');
-            $table->integer('badge_id');
-            $table->string('codename');
-            $table->integer('hero_id');
+            $table->string('type');
+            $table->string('name');
+            $table->string('location');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateHeroesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('heroes');
+        Schema::drop('stations');
     }
 }
