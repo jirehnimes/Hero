@@ -1,6 +1,6 @@
 angular.module('hero.mainController', [])
 
-.controller('MainCtrl', function($scope, $state, Login, Account) {
+.controller('MainCtrl', function($scope, $state, Login, Account, $ionicPopup, $ionicPlatform, $cordovaSms) {
 	$scope.loginData = {
 		username: '',
 		password: ''
@@ -25,5 +25,21 @@ angular.module('hero.mainController', [])
 			}
 		);
 	}
+
+	$ionicPlatform.ready(function(){
+
+		$scope.sendSMS = function(){
+			$cordovaSms
+			.send('09068570712', 'SMS content was sent.')
+			.then(function() {
+				$ionicPopup.alert({
+					title: 'SMS Sent.'
+				});
+			}, function(error) {
+			// An error occurred
+			});
+		}
+		
+	});
 });
 
