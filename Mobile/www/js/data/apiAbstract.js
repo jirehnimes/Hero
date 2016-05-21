@@ -1,4 +1,4 @@
-var server = "http://heroapi.com.local/"; //server
+var server = "http://heroapi.com.local:4041/"; //server
 
 angular.module('hero.apiAbstract',['ngResource'])
 

@@ -21,6 +21,7 @@ angular.module('hero', [
 
   // services
   'hero.loginService',
+  'hero.accountService',
 
   // directives
 

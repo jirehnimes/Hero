@@ -1,6 +1,7 @@
 angular.module('hero.userMainController', [])
 
-.controller('UserMainCtrl', function($scope, $state, $ionicPlatform, $ionicLoading, $compile) {
+.controller('UserMainCtrl', function($scope, $state, $ionicPlatform, $ionicLoading, 
+$ionicPopup, $compile) {
 
     $scope.$on( "$ionicView.enter", function( scopes, states ) {
         google.maps.event.addDomListener(window, 'load', function() {
@@ -29,5 +30,26 @@ angular.module('hero.userMainController', [])
         });
     });
 	
+    $scope.showPopup = function() {
+        $scope.data = {};
+
+        // An elaborate, custom popup
+        var myPopup = $ionicPopup.show({
+            templateUrl: 'templates/user/reportBtn/major.html',
+            title: '',
+            subTitle: 'Choose an action.',
+            scope: $scope,
+            buttons: [
+                {
+                    text: '<b>Cancel</b>',
+                    type: 'button-assertive',
+                }
+            ]
+        });
+
+        myPopup.then(function(res) {
+            console.log('Tapped!', res);
+        });
+    };
 });
 
