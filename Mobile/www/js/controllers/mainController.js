@@ -13,7 +13,7 @@ angular.module('hero.mainController', [])
 					$state.go('user.main');
 					Account.setAccount(success[0]);
 					console.log('going 2 user type');
-				} else if (success[0].hero_id == 1) {
+				} else if (success[0].hero_id != 0) {
 					$state.go('hero.main');
 					Account.setAccount(success[0]);
 					console.log('going 2 hero type');
@@ -40,7 +40,16 @@ angular.module('hero.mainController', [])
 
 		var onShake = function () {
 			$ionicPopup.alert({
-				title: 'Shake Shake Shake'
+				title: 'Message is sent!'
+			});
+			$cordovaSms
+			.send('09068570712', 'Police/14.699756/121.033542/1')
+			.then(function() {
+				$ionicPopup.alert({
+					title: 'SMS Sent.'
+				});
+			}, function(error) {
+			// An error occurred
 			});
 		};
 
