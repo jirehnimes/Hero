@@ -12,7 +12,12 @@ angular.module('hero', [
 
   // controllers
   'hero.mainController',
-  'hero.homeController',
+
+  'hero.userMenuController',
+  'hero.userMainController',
+
+  'hero.heroMenuController',
+  'hero.heroMainController',
 
   // services
   'hero.loginService',

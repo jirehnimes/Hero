@@ -1,1 +1,26 @@
 /* Empty. Add your own CSS if you like */
+
+.no-padding{
+	padding: 0 !important;
+}
+
+.scroll{
+	height: 100%;
+}
+
+.bar-footer{
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0;
+    height: 50px;
+}
+
+.button-yellow{
+	background-color: rgb(255, 255, 153);
+	color: black;
+}
+
+.button-orange{
+	background-color: orange;
+	color: black;
+}

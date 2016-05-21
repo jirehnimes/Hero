@@ -18,10 +18,42 @@ angular.module('hero.routes', ['ui.router'])
 
 
 
-    .state('home', {
-      url: '/home',
-      templateUrl: 'templates/home.html',
-      controller: 'HomeCtrl'
+    .state('user', {
+      url: '/user',
+      templateUrl: 'templates/user/menu.html',
+      controller: 'UserMenuCtrl'
+    })
+
+
+
+    .state('user.main', {
+      url: '/user/main',
+      views: {
+        'menuUserContent': {
+          templateUrl: 'templates/user/main.html',
+          controller: 'UserMainCtrl'
+        }
+      }
+    })
+
+
+
+    .state('hero', {
+      url: '/hero',
+      templateUrl: 'templates/hero/menu.html',
+      controller: 'HeroMenuCtrl'
+    })
+
+
+
+    .state('hero.main', {
+      url: '/hero/main',
+      views: {
+        'menuUserContent': {
+          templateUrl: 'templates/hero/main.html',
+          controller: 'HeroMainCtrl'
+        }
+      }
     })
 
 

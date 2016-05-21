@@ -12,12 +12,13 @@ angular.module('hero.mainController', [])
 				// $state.reload();
 				if (success[0].hero_id == 0) {
 					// Account.setAccount(success[0]);
-					$state.go('home');
-					console.log('going 2 admin');
+					$state.go('user.main');
+					location.reload();
+					console.log('going 2 user type');
 				} else if (success[0].hero_id == 1) {
 					// Account.setAccount(success[0]);
-					$state.go('home');
-					console.log('going 2 client');
+					$state.go('hero.main');
+					console.log('going 2 hero type');
 				};
 			},function(fail){
 				console.log('Invalid Login');

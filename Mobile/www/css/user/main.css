@@ -1,0 +1,20 @@
+#usermain{
+	background-color: rgb(255, 153, 240);
+}
+
+#usermain ion-footer-bar{
+	height: 70px;
+	padding: 20px;
+	margin-bottom: 15px;
+	border-top: 0;
+	background-color: rgb(52,52,52);
+}
+
+#usermain ion-footer-bar div.title{
+	height: 100%;
+}
+
+#usermain .btnReport{
+	height: 100%;
+	width: 30%;
+}
