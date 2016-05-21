@@ -18,11 +18,24 @@ class UsersTableSeeder extends Seeder
         User::create(array(
  
             'first_name'    => 'demo',
-            'last_name'     => 'admin',
-            'username'		=> 'admin', 
-            'email'         => 'admin@gmail.com',
+            'last_name'     => 'user',
+            'username'		=> 'user', 
+            'email'         => 'user@gmail.com',
             'password'      => Hash::make('password'), //hashes our password nicely for us
-            'mobile_number' => '09069542341'
+            'mobile_number' => '09069542341',
+            'hero_id'       => '0',
+ 
+        ));
+
+        User::create(array(
+ 
+            'first_name'    => 'demo',
+            'last_name'     => 'hero',
+            'username'      => 'hero', 
+            'email'         => 'hero@gmail.com',
+            'password'      => Hash::make('password'), //hashes our password nicely for us
+            'mobile_number' => '09779542341',
+            'hero_id'       => '1',
  
         ));
     }
