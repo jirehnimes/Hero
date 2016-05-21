@@ -1,19 +1,39 @@
 <ion-view title="" id="heromain">
     <ion-content overflow-scroll="true" padding="false" scroll="true">
-        <div class="row no-padding" style="height: 100%;">
-            <div class="col-67" style="height: 100%;">
-            	<!--<img src="/img/hero/herofemale.png" style="width: 100%; height: auto;" />-->
-            	<ion-nav-view name="heroContent"></ion-nav-view>
-            </div>
-            <div class="col-33" style="background-color: rgb(255, 153, 240); height: 100%;">
+        <div class="row no-padding rootRow">
+            <div class="col-67">
             	<div class="row no-padding">
+                    <div class="col" ng-hide="disAvatar">
+                        <img ng-src="{{ avatarimg }}" style="width: 100%; height: auto;" />
+                    </div>
+                    <div class="col" ng-hide="disAbilities">
+                        <h2 style="text-align: center;">Abilities</h2>
+                        <ul class="list">
+                            <li class="item" ng-repeat="ability in abilities">
+                                <h4>{{ ability.ability }}</h4>
+                                <p>{{ ability.description }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col" ng-hide="disBadges">
+                        Badges
+                    </div>
+                </div>
+            </div>
+            <div class="col-33">
+            	<div class="row no-padding">
+                    <div class="col">
+                        <button class="button button-success" ng-click="showAvatar()">Avatar</button>
+                    </div>
+                </div>
+                <div class="row no-padding">
             		<div class="col">
-            			<button class="button button-success">Abilities</button>
+            			<button class="button button-success" ng-click="showAbilities()">Abilities</button>
             		</div>
             	</div>
             	<div class="row no-padding">
             		<div class="col">
-            			<button class="button button-success">Badges</button>
+            			<button class="button button-success" ng-click="showBadges()">Badges</button>
             		</div>
             	</div>
             </div>

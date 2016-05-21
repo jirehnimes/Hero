@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Report;
+
+use Illuminate\Support\Facades\Input;
+
 class ReportsController extends Controller
 {
     /**
@@ -36,8 +40,13 @@ class ReportsController extends Controller
      */
     public function store()
     {
-        $report=Request::all();
-        Report::create($report);
+        $input = Input::all();
+        $add = new Report;
+        $add->type = $input['type'];
+        $add->type = $input['latitude'];
+        $add->type = $input['longitude'];
+        $add->type = $input['user_id'];
+        $add->save();
     }
 
     /**

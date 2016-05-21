@@ -10,7 +10,7 @@ class Ability extends Model
 
   public function hero()
     {
-        return $this->belongsTo('App\Hero', 'hero_id', 'id');
+        return $this->belongsTo('App\Hero', 'ability_id', 'id');
     }
 
 }

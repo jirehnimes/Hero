@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\User;
+use App\Hero;
+
 class HeroesController extends Controller
 {
     /**
@@ -13,9 +16,9 @@ class HeroesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        //
+        return User::with('Hero')->find($id);
     }
 
     /**

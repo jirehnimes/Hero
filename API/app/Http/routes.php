@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::post('/user/login', 'UsersController@login');
 Route::post('/user', 'UsersController@index');
+Route::post('/report/send', 'ReportsController@store');
+
+Route::get('/hero/{id}', 'HeroesController@index');
+Route::get('/abilities/{id}', 'AbilitiesController@index');

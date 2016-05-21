@@ -1,0 +1,25 @@
+#heromain ion-content div.rootRow{
+	height: 100%;
+}
+
+#heromain ion-content div.rootRow .col-67{
+	height: 100%;
+}
+
+#heromain ion-content div.rootRow .col-67 .row{
+	height: 100%;
+}
+
+#heromain ion-content div.rootRow .col-67 .row .col{
+	height: 100%;
+}
+
+
+#heromain ion-content div.rootRow .col-33{
+	background-color: rgb(255, 153, 240); 
+	height: 100%;
+}
+
+#heromain ion-content div.rootRow .col-33 button{
+	width: 100%;
+}

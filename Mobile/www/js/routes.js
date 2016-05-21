@@ -27,7 +27,7 @@ angular.module('hero.routes', ['ui.router'])
 
 
     .state('user.main', {
-      url: '/user/main',
+      url: '/main',
       views: {
         'menuUserContent': {
           templateUrl: 'templates/user/main.html',
@@ -47,7 +47,7 @@ angular.module('hero.routes', ['ui.router'])
 
 
     .state('hero.main', {
-      url: '/hero/main',
+      url: '/main',
       views: {
         'menuHeroContent': {
           templateUrl: 'templates/hero/main.html',
@@ -55,6 +55,17 @@ angular.module('hero.routes', ['ui.router'])
         }
       }
     })
+
+
+
+    // .state('hero.main.avatar', {
+    //   url: '/avatar',
+    //   views: {
+    //     'heroContent': {
+    //       templateUrl: 'templates/hero/main/avatar.html'
+    //     }
+    //   }
+    // })
 
 
 

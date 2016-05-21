@@ -67,10 +67,18 @@ angular.module('hero.apihero',['ngResource','hero.apiAbstract'])
   }
 })
 
-.factory("GetWaybill",function(ServerRequest){
+.factory("GetHeroAPI",function(ServerRequest){
   return{
-    getResource : function(callback_promise){
-      return ServerRequest.getResource("waybill",callback_promise);
+    getResource : function(id,callback_promise){
+      return ServerRequest.getResource("hero/" + id, callback_promise);
+    }
+  }
+})
+
+.factory("GetAbilitiesAPI",function(ServerRequest){
+  return{
+    getResource : function(id,callback_promise){
+      return ServerRequest.getResource("abilities/" + id, callback_promise);
     }
   }
 })

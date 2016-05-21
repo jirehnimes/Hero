@@ -13,27 +13,27 @@ class Hero extends Model
 
      public function guild()
     {
-        return $this->belongsTo('App\Guild', 'hero_id', 'id');
+        return $this->belongsTo('App\Guild', 'id', 'guild_id');
     }
 
     public function ability()
     {
-        return $this->hasMany('App\Ability', 'hero_id', 'id');
+        return $this->hasMany('App\Ability', 'id', 'ability_id');
     }
 
     public function badge()
     {
-        return $this->hasMany('App\Badge', 'hero_id', 'id');
+        return $this->hasMany('App\Badge', 'id', 'badge_id');
     }
 
     public function commend()
     {
-        return $this->hasMany('App\Commend', 'hero_id', 'id');
+        return $this->hasMany('App\Commend', 'id', 'commend_id');
     }
 
      public function rating()
     {
-        return $this->hasMany('App\Rating', 'hero_id', 'id');
+        return $this->hasMany('App\Rating', 'id', 'rating_id');
     }
 
 }

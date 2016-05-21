@@ -17,6 +17,7 @@ class CreateReportsTable extends Migration
             $table->string('type');
             $table->decimal('latitude', 10,6);
             $table->decimal('longitude', 10,6);
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
