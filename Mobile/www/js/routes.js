@@ -49,7 +49,7 @@ angular.module('hero.routes', ['ui.router'])
     .state('hero.main', {
       url: '/hero/main',
       views: {
-        'menuUserContent': {
+        'menuHeroContent': {
           templateUrl: 'templates/hero/main.html',
           controller: 'HeroMainCtrl'
         }
