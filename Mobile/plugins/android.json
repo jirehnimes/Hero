@@ -36,10 +36,16 @@
         },
         "org.apache.cordova.speech.speechrecognition": {
             "PACKAGE_NAME": "com.ionicframework.mobile121381"
+        },
+        "cordova-plugin-shake": {
+            "PACKAGE_NAME": "com.ionicframework.mobile121381"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.mobile121381"
+        },
+        "cordova-plugin-device-motion": {
             "PACKAGE_NAME": "com.ionicframework.mobile121381"
         }
     }
