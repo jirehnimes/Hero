@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use Auth;
+use Illuminate\Support\Facades\Input;
 
 class UsersController extends Controller
 {
@@ -17,6 +19,17 @@ class UsersController extends Controller
     public function index()
     {
         return User::all();
+    }
+
+    public function login()
+    {
+        if(Auth::attempt(Input::only('username','password'))){
+            $user[] = Auth::user();
+            return $user;
+        }else{
+            $user[] = 'invalid email/pass combo';
+            return $user;
+        }
     }
 
     /**

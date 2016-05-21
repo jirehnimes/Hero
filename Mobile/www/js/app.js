@@ -3,19 +3,25 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', [
+angular.module('hero', [
   'ionic',
   'ngCordova',
   'ngResource',
   'ui.router',
-  'app.routes',
+  'hero.routes',
 
   // controllers
-  'app.mainController',
-  'app.homeController',
+  'hero.mainController',
+  'hero.homeController',
+
   // services
+  'hero.loginService',
 
   // directives
+
+  //data
+  'hero.apiAbstract',
+  'hero.apihero',
 ])
 
 .run(function($ionicPlatform) {

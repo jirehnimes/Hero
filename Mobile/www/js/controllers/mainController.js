@@ -1,12 +1,28 @@
-angular.module('app.mainController', [])
+angular.module('hero.mainController', [])
 
-.controller('MainCtrl', function($scope, $state) {
+.controller('MainCtrl', function($scope, $state, Login) {
 	$scope.loginData = {
 		username: '',
 		password: ''
 	};
 	$scope.doLogin = function(){
-		$state.go('home');
+		var login = Login.login($scope.loginData.username,$scope.loginData.password).then(
+			function(success){
+				console.log(success[0]);
+				// $state.reload();
+				if (success[0].hero_id == 0) {
+					// Account.setAccount(success[0]);
+					$state.go('home');
+					console.log('going 2 admin');
+				} else if (success[0].hero_id == 1) {
+					// Account.setAccount(success[0]);
+					$state.go('home');
+					console.log('going 2 client');
+				};
+			},function(fail){
+				console.log('Invalid Login');
+			}
+		);
 	}
 });
 

@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
             'email'         => 'user@gmail.com',
             'password'      => Hash::make('password'), //hashes our password nicely for us
             'mobile_number' => '09069542341',
-            'hero_id'       => '0',
+            'hero_id'       => 0,
  
         ));
 
@@ -35,7 +35,7 @@ class UsersTableSeeder extends Seeder
             'email'         => 'hero@gmail.com',
             'password'      => Hash::make('password'), //hashes our password nicely for us
             'mobile_number' => '09779542341',
-            'hero_id'       => '1',
+            'hero_id'       => 1,
  
         ));
     }

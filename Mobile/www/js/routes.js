@@ -1,4 +1,4 @@
-angular.module('app.routes', ['ui.router'])
+angular.module('hero.routes', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 

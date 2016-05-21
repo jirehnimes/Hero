@@ -1,6 +1,6 @@
-var server = "http://tramsapi.com.local/"; //server
+var server = "http://heroapi.com.local/"; //server
 
-angular.module('trams.apiAbstract',['ngResource'])
+angular.module('hero.apiAbstract',['ngResource'])
 
 .config(['$httpProvider', function ($httpProvider) {
   // Intercept POST requests, convert to standard form encoding

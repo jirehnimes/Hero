@@ -1,5 +1,5 @@
 
-angular.module('trams.apitrams',['ngResource','trams.apiAbstract'])
+angular.module('hero.apihero',['ngResource','hero.apiAbstract'])
 
 // TO REMOVE
 // .config(['$httpProvider', function ($httpProvider) {
@@ -71,6 +71,14 @@ angular.module('trams.apitrams',['ngResource','trams.apiAbstract'])
   return{
     getResource : function(callback_promise){
       return ServerRequest.getResource("waybill",callback_promise);
+    }
+  }
+})
+
+.factory("GetUser",function(ServerRequest){
+  return{
+    getResource : function(callback_promise){
+      return ServerRequest.getResource("user",callback_promise);
     }
   }
 })
