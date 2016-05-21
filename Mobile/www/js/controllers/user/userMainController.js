@@ -58,8 +58,7 @@ $ionicPopup, $compile) {
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/red.html',
-            title: '',
-            subTitle: 'Choose an action.',
+            title: 'Choose an action.',
             scope: $scope,
             buttons: [
                 {
@@ -80,8 +79,7 @@ $ionicPopup, $compile) {
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/orange.html',
-            title: '',
-            subTitle: 'Choose an action.',
+            title: 'Choose an action.',
             scope: $scope,
             buttons: [
                 {
@@ -102,8 +100,7 @@ $ionicPopup, $compile) {
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/yellow.html',
-            title: '',
-            subTitle: 'Choose an action.',
+            title: 'Choose an action.',
             scope: $scope,
             buttons: [
                 {

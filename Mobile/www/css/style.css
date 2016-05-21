@@ -29,3 +29,20 @@
 	background-color: rgb(255, 153, 240);
 	color: black;
 }
+
+.popup-head{
+	background-color:  rgb(52, 52, 52);
+	color: white;
+}
+
+.popup-body{
+	background-color: white;
+}
+
+.popup-title{
+	color: white !important;
+}
+
+.popup-buttons{
+	background-color:  rgb(52, 52, 52);
+}
