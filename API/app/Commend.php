@@ -4,13 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ability extends Model
+class Commend extends Model
 {
-
-
-  public function hero()
+     public function hero()
     {
         return $this->belongsTo('App\Hero', 'hero_id', 'id');
     }
-
 }
