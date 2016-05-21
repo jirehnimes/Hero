@@ -12,6 +12,7 @@ angular.module('app', [
 
   // controllers
   'app.mainController',
+  'app.homeController',
   // services
 
   // directives

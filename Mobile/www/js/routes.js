@@ -21,7 +21,7 @@ angular.module('app.routes', ['ui.router'])
     .state('home', {
       url: '/home',
       templateUrl: 'templates/home.html',
-      // controller: 'HomeCtrl'
+      controller: 'HomeCtrl'
     })
 
 
