@@ -30,12 +30,78 @@ $ionicPopup, $compile) {
         });
     });
 	
-    $scope.showPopup = function() {
+    /*$scope.showPopup = function() {
         $scope.data = {};
 
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/major.html',
+            title: '',
+            subTitle: 'Choose an action.',
+            scope: $scope,
+            buttons: [
+                {
+                    text: '<b>Cancel</b>',
+                    type: 'button-assertive',
+                }
+            ]
+        });
+
+        myPopup.then(function(res) {
+            console.log('Tapped!', res);
+        });
+    };*/
+
+    $scope.showRed = function() {
+        $scope.data = {};
+
+        // An elaborate, custom popup
+        var myPopup = $ionicPopup.show({
+            templateUrl: 'templates/user/reportBtn/red.html',
+            title: '',
+            subTitle: 'Choose an action.',
+            scope: $scope,
+            buttons: [
+                {
+                    text: '<b>Cancel</b>',
+                    type: 'button-assertive',
+                }
+            ]
+        });
+
+        myPopup.then(function(res) {
+            console.log('Tapped!', res);
+        });
+    };
+
+    $scope.showOrange = function() {
+        $scope.data = {};
+
+        // An elaborate, custom popup
+        var myPopup = $ionicPopup.show({
+            templateUrl: 'templates/user/reportBtn/orange.html',
+            title: '',
+            subTitle: 'Choose an action.',
+            scope: $scope,
+            buttons: [
+                {
+                    text: '<b>Cancel</b>',
+                    type: 'button-assertive',
+                }
+            ]
+        });
+
+        myPopup.then(function(res) {
+            console.log('Tapped!', res);
+        });
+    };
+
+    $scope.showYellow = function() {
+        $scope.data = {};
+
+        // An elaborate, custom popup
+        var myPopup = $ionicPopup.show({
+            templateUrl: 'templates/user/reportBtn/yellow.html',
             title: '',
             subTitle: 'Choose an action.',
             scope: $scope,
