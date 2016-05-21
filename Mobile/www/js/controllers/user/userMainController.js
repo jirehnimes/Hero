@@ -53,8 +53,6 @@ $ionicPopup, $compile) {
     };*/
 
     $scope.showRed = function() {
-        $scope.data = {};
-
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/red.html',
@@ -74,8 +72,6 @@ $ionicPopup, $compile) {
     };
 
     $scope.showOrange = function() {
-        $scope.data = {};
-
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/orange.html',
@@ -95,8 +91,6 @@ $ionicPopup, $compile) {
     };
 
     $scope.showYellow = function() {
-        $scope.data = {};
-
         // An elaborate, custom popup
         var myPopup = $ionicPopup.show({
             templateUrl: 'templates/user/reportBtn/yellow.html',
@@ -113,6 +107,85 @@ $ionicPopup, $compile) {
         myPopup.then(function(res) {
             console.log('Tapped!', res);
         });
+    };
+
+
+    //RED
+    $scope.sendViolence = function(){
+        console.log('violence');
+
+    };
+
+    $scope.sendOnLabor = function(){
+        console.log('on labor');
+
+    };
+
+    $scope.sendRobbery = function(){
+        console.log('robbery');
+
+    };
+
+    $scope.sendAccident = function(){
+        console.log('accident');
+
+    };
+
+    $scope.sendMajorInjury = function(){
+        console.log('major injury');
+
+    };
+
+    $scope.sendRape = function(){
+        console.log('rape');
+
+    };
+
+    //ORANGE
+    $scope.sendLost = function(){
+        console.log('lost');
+
+    };
+
+    $scope.sendSick = function(){
+        console.log('sick');
+
+    };
+
+    $scope.sendStranded = function(){
+        console.log('stranded');
+
+    };
+
+    $scope.sendPervert = function(){
+        console.log('pervert');
+
+    };
+
+    $scope.sendMinorInjury = function(){
+        console.log('minor injury');
+
+    };
+
+    //YELLOW
+    $scope.sendBurdened = function(){
+        console.log('burdened');
+
+    };
+
+    $scope.sendConfused = function(){
+        console.log('confused');
+
+    };
+
+    $scope.sendIrritated = function(){
+        console.log('irritated');
+
+    };
+
+    $scope.sendAllergic = function(){
+        console.log('allergic');
+
     };
 });
 
