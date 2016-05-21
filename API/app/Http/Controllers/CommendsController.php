@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\User;
-use Auth;
-use Illuminate\Support\Facades\Input;
 
-class UsersController extends Controller
+class CommendsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return User::all();
-    }
-
-    public function login()
-    {
-        if(Auth::attempt(Input::only('username','password'))){
-            $user[] = Auth::user();
-            return $user;
-        }else{
-            $user[] = 'invalid email/pass combo';
-            return $user;
-        }
+        //
     }
 
     /**
@@ -50,9 +36,8 @@ class UsersController extends Controller
      */
     public function store()
     {
-         $user=Request::all();
-        User::create($user);
-        
+        $commend=Request::all();
+        Guild::create($commend);
     }
 
     /**
@@ -63,9 +48,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        
-        $user=User::find($id);
-
+        $commend=Commend::find($id);
     }
 
     /**
@@ -76,8 +59,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        
-
+        $commend=Commend::find($id);
     }
 
     /**
@@ -89,10 +71,9 @@ class UsersController extends Controller
      */
     public function update($id)
     {
-        $userUpdate=Request::all();
-        $user=User::find($id);
-        $user->update($userUpdate);
-
+        $commendUpdate=Request::all();
+        $commend=Commend::find($id);
+        $commend->update($commendUpdate);
     }
 
     /**
@@ -103,6 +84,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
+        Commend::find($id)->delete();
     }
 }

@@ -5,11 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\User;
-use Auth;
-use Illuminate\Support\Facades\Input;
 
-class UsersController extends Controller
+class HeroesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return User::all();
-    }
-
-    public function login()
-    {
-        if(Auth::attempt(Input::only('username','password'))){
-            $user[] = Auth::user();
-            return $user;
-        }else{
-            $user[] = 'invalid email/pass combo';
-            return $user;
-        }
+        //
     }
 
     /**
@@ -39,7 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -48,11 +34,11 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-         $user=Request::all();
-        User::create($user);
-        
+        $hero=Request::all();
+        Hero::create($book);
+
     }
 
     /**
@@ -63,8 +49,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        
-        $user=User::find($id);
+        $hero=Hero::find($id);
 
     }
 
@@ -76,8 +61,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        
-
+        //
     }
 
     /**
@@ -89,10 +73,9 @@ class UsersController extends Controller
      */
     public function update($id)
     {
-        $userUpdate=Request::all();
-        $user=User::find($id);
-        $user->update($userUpdate);
-
+        $heroUpdate=Request::all();
+        $hero=Hero::find($id);
+        $hero->update($heroUpdate);
     }
 
     /**
@@ -103,6 +86,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        User::find($id)->delete();
+        Hero::find($id)->delete();
+
     }
 }
