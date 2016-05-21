@@ -13,7 +13,7 @@ class CreateBadgesTable extends Migration
     public function up()
     {
         Schema::create('badges', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id');
             $table->string('description');
             $table->integer('hero_id');
             $table->timestamps();

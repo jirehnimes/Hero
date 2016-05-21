@@ -1,8 +1,21 @@
-<ion-view title="HeroMain" id="heromain">
+<ion-view title="" id="heromain">
     <ion-content overflow-scroll="true" padding="false" scroll="true">
-        <div class="row">
-            <div class="col">
-                <button class="button button-success" ng-click="sendSMS()">SEND</button>
+        <div class="row no-padding" style="height: 100%;">
+            <div class="col-67" style="height: 100%;">
+            	<!--<img src="/img/hero/herofemale.png" style="width: 100%; height: auto;" />-->
+            	<ion-nav-view name="heroContent"></ion-nav-view>
+            </div>
+            <div class="col-33" style="background-color: rgb(255, 153, 240); height: 100%;">
+            	<div class="row no-padding">
+            		<div class="col">
+            			<button class="button button-success">Abilities</button>
+            		</div>
+            	</div>
+            	<div class="row no-padding">
+            		<div class="col">
+            			<button class="button button-success">Badges</button>
+            		</div>
+            	</div>
             </div>
         </div>
     </ion-content>

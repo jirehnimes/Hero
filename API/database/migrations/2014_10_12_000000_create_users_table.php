@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('mobile_number');
             $table->integer('hero_id');
+            $table->string('gender');
+            $table->decimal('latitude', 10, 6);
+            $table->decimal('longitude', 10, 6);
             $table->rememberToken();
             $table->timestamps();
         });
