@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 use App\Http\Requests;
 
@@ -18,7 +19,8 @@ class HeroesController extends Controller
      */
     public function index($id)
     {
-        return User::with('Hero')->find($id);
+        $user = User::with('Hero')->find($id);
+        return $user;
     }
 
     /**
@@ -50,9 +52,9 @@ class HeroesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        $hero=Hero::find($id);
+        return User::with('Hero')->get();
 
     }
 

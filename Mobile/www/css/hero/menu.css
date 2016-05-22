@@ -1,16 +1,16 @@
-#usermenu ion-side-menu ion-header-bar{
+#heromenu ion-side-menu ion-header-bar{
 	background-color: rgb(255, 153, 240) !important;
 	display: block;
 	height: 140px;
 	text-align: center;
 }
 
-#usermenu ion-side-menu ion-header-bar img#avatar{
+#heromenu ion-side-menu ion-header-bar img#avatar{
 	border-radius: 100% 100%;
 	height: 60px;
 	width: auto;
 }
 
-#usermenu ion-side-menu ion-content{
+#heromenu ion-side-menu ion-content{
 	background-color: rgb(52, 52, 52) !important;
 }
