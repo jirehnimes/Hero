@@ -8,15 +8,15 @@ angular.module('hero.mainController', [])
 	$scope.doLogin = function(){
 		var login = Login.login($scope.loginData.username,$scope.loginData.password).then(
 			function(success){
-				console.log(success[0]);
+				// console.log(success[0]);
 				if (success[0].hero_id == 0) {
 					$state.go('user.main');
 					Account.setAccount(success[0]);
-					console.log('going 2 user type');
+					// console.log('going 2 user type');
 				} else if (success[0].hero_id != 0) {
 					$state.go('hero.main');
 					Account.setAccount(success[0]);
-					console.log('going 2 hero type');
+					// console.log('going 2 hero type');
 				};
 			},function(fail){
 				console.log('Invalid Login');
@@ -59,20 +59,20 @@ angular.module('hero.mainController', [])
 			});
 		};
 
-		shake.startWatch(onShake, 60 /*, onError */);
+		shake.startWatch(onShake, 30 /*, onError */);
 
-		// $scope.recognizedText = '';
+		$scope.recognizedText = '';
 
-		// $scope.record = function() {
-		// 	var recognition = new SpeechRecognition();
-		// 	recognition.onresult = function(event) {
-		// 	    if (event.results.length > 0) {
-		// 	        $scope.recognizedText = event.results[0][0].transcript;
-		// 	        $scope.$apply()
-		// 	    }
-		// 	};
-		// 	recognition.start();
-		// };
+		$scope.record = function() {
+			var recognition = new SpeechRecognition();
+			recognition.onresult = function(event) {
+			    if (event.results.length > 0) {
+			        $scope.recognizedText = event.results[0][0].transcript;
+			        $scope.$apply()
+			    }
+			};
+			recognition.start();
+		};
 		
 	});
 });

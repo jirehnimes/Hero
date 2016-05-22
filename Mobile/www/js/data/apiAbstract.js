@@ -1,5 +1,5 @@
 //var server = "http://heroapi.com.local:4041/"; //server
- var server = "http://10.99.0.63:4041/";
+var server = "http://10.99.0.63:4041/";
 
 angular.module('hero.apiAbstract',['ngResource'])
 
