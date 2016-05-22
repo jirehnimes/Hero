@@ -19,8 +19,9 @@ class HeroesController extends Controller
      */
     public function index($id)
     {
-        $user = User::with('Hero')->find($id);
-        return $user;
+        return User::with('Hero')->find($id);
+        // return (object) $hero;
+        // return response()->json([{'stn' => $user}], Response::HTTP_OK);
     }
 
     /**

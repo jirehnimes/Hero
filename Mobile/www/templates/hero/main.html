@@ -5,7 +5,7 @@
             	<div class="row no-padding">
                     <div class="col" ng-hide="disAvatar">
                         <img ng-src="{{ avatarimg }}" style="width: 100%; height: auto;" />
-                        <h3 style="text-align: center;">{{ hero.hero.codename | uppercase }}</h3>
+                        <h1 id="name" style="text-align: center; color: black;">{{ hero.hero.codename | uppercase }}</h1>
                     </div>
                     <div class="col" ng-hide="disAbilities">
                         <h2 style="text-align: center;">Abilities</h2>
@@ -24,17 +24,17 @@
             <div class="col-33">
             	<div class="row no-padding">
                     <div class="col">
-                        <button class="button button-success button-clear" ng-click="showAvatar()"><img src="img/hero/avatar.png"></button>
+                        <button class="button button-success" ng-click="showAvatar()"><img src="img/hero/avatar.png"></button>
                     </div>
                 </div>
                 <div class="row no-padding">
             		<div class="col">
-            			<button class="button button-success button-clear" ng-click="showAbilities()"><img src="img/hero/ability.png"></button>
+            			<button class="button button-success" ng-click="showAbilities()"><img src="img/hero/ability.png"></button>
             		</div>
             	</div>
             	<div class="row no-padding">
             		<div class="col">
-            			<button class="button button-success button-clear" ng-click="showBadges()"><img src="img/hero/badge.png"></button>
+            			<button class="button button-success" ng-click="showBadges()"><img src="img/hero/badge.png"></button>
             		</div>
             	</div>
             </div>

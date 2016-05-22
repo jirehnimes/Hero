@@ -1,9 +1,20 @@
+@font-face {
+    font-family: neoteric;
+    src: url('/font/neotericbold.ttf');
+}
+
+#heromain #name{
+	font-family: neoteric;
+	font-size: 60px;
+}
+
 #heromain ion-content div.rootRow{
 	height: 100%;
 }
 
 #heromain ion-content div.rootRow .col-67{
 	height: 100%;
+	background-image: url("/img/hero/wallpaper.jpg");
 }
 
 #heromain ion-content div.rootRow .col-67 .row{
@@ -22,4 +33,11 @@
 
 #heromain ion-content div.rootRow .col-33 button{
 	width: 100%;
+	height: 70px;
+	background-color: transparent;
+}
+
+#heromain ion-content div.rootRow .col-33 button img{
+	height: 100%;
+	width: auto;
 }
