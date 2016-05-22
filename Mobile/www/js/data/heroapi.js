@@ -91,4 +91,20 @@ angular.module('hero.apihero',['ngResource','hero.apiAbstract'])
   }
 })
 
+.factory("GetStations",function(ServerRequest){
+  return{
+    getResource : function(callback_promise){
+      return ServerRequest.getResource("stations",callback_promise);
+    }
+  }
+})
+
+.factory("GetHeroes",function(ServerRequest){
+  return{
+    getResource : function(callback_promise){
+      return ServerRequest.getResource("heroes",callback_promise);
+    }
+  }
+})
+
 ;

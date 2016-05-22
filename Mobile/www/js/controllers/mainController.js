@@ -39,14 +39,20 @@ angular.module('hero.mainController', [])
 		}
 
 		var onShake = function () {
-			$ionicPopup.alert({
-				title: 'Message is sent!'
-			});
 			$cordovaSms
-			.send('09068570712', 'Police/14.699756/121.033542/1')
+			.send('09068570712', 'red alert/14.699756/121.033542/1')
 			.then(function() {
 				$ionicPopup.alert({
-					title: 'SMS Sent.'
+					title: 'Emergency message is sent.'
+				});
+			}, function(error) {
+			// An error occurred
+			});
+			$cordovaSms
+			.send('09154783123', 'Pam is in trouble at location 14.699756,121.033542. Authorities have been contacted.')
+			.then(function() {
+				$ionicPopup.alert({
+					title: 'Emergency message is sent by Pam.'
 				});
 			}, function(error) {
 			// An error occurred
@@ -55,18 +61,18 @@ angular.module('hero.mainController', [])
 
 		shake.startWatch(onShake, 60 /*, onError */);
 
-		$scope.recognizedText = '';
+		// $scope.recognizedText = '';
 
-		$scope.record = function() {
-			var recognition = new SpeechRecognition();
-			recognition.onresult = function(event) {
-			    if (event.results.length > 0) {
-			        $scope.recognizedText = event.results[0][0].transcript;
-			        $scope.$apply()
-			    }
-			};
-			recognition.start();
-		};
+		// $scope.record = function() {
+		// 	var recognition = new SpeechRecognition();
+		// 	recognition.onresult = function(event) {
+		// 	    if (event.results.length > 0) {
+		// 	        $scope.recognizedText = event.results[0][0].transcript;
+		// 	        $scope.$apply()
+		// 	    }
+		// 	};
+		// 	recognition.start();
+		// };
 		
 	});
 });

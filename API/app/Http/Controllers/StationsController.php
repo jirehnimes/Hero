@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 use App\Http\Requests;
+
+use App\Station;
 
 class StationsController extends Controller
 {
@@ -15,7 +18,8 @@ class StationsController extends Controller
      */
     public function index()
     {
-        //
+        $station = Station::all();
+        return response()->json(['stn' => $station], Response::HTTP_OK);
     }
 
     /**
@@ -48,7 +52,7 @@ class StationsController extends Controller
      */
     public function show($id)
     {
-         $station=Station::find($id);
+        return Station::all();
     }
 
     /**

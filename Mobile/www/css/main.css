@@ -1,9 +1,12 @@
 #main{
 	background-color: rgb(255, 153, 240);
+	height: 100%;
 }
 
 #main #logodiv{
+	height: 50%;
 	padding: 10px;
+	padding-top: 25%;	
 	text-align: center;
 	background-color: white;
 	margin-bottom: 5px;

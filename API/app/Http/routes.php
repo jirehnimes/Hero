@@ -21,3 +21,5 @@ Route::post('/report/send', 'ReportsController@store');
 
 Route::get('/hero/{id}', 'HeroesController@index');
 Route::get('/abilities/{id}', 'AbilitiesController@index');
+Route::get('/stations', 'StationsController@index');
+Route::get('/heroes', 'HeroesController@show');

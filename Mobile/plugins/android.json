@@ -39,6 +39,9 @@
         },
         "cordova-plugin-shake": {
             "PACKAGE_NAME": "com.ionicframework.mobile121381"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.ionicframework.mobile121381"
         }
     },
     "dependent_plugins": {
