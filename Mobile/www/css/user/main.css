@@ -3,10 +3,8 @@
 }
 
 #usermain ion-footer-bar{
+	bottom: 0;
 	height: 70px;
-	padding: 20px;
-	margin-bottom: 15px;
-	border-top: 0;
 	background-color: rgb(52,52,52);
 }
 
